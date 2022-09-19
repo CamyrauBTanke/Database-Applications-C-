@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72E47346-D79B-45D3-83D9-A4B3060A58B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>DB_provider</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>also\company.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.22\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressRing.Forms.Plugin, Version=1.0.6460.16364, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Forms.ProgressRing.0.1.2\lib\portable-net45+wp80+win8+wpa81\ProgressRing.Forms.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class\Class.cs" />
+    <Compile Include="worked_forms\clientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\clientsForm.Designer.cs">
+      <DependentUpon>clientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\DateBase.cs" />
+    <Compile Include="DialogForUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogForUser.Designer.cs">
+      <DependentUpon>DialogForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="also\FormBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="also\FormBar.Designer.cs">
+      <DependentUpon>FormBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="also\FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="also\FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\managersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\managersForm.Designer.cs">
+      <DependentUpon>managersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\materialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\materialForm.Designer.cs">
+      <DependentUpon>materialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\ordersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\ordersForm.Designer.cs">
+      <DependentUpon>ordersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\RegistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\RegistForm.Designer.cs">
+      <DependentUpon>RegistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\servicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\servicesForm.Designer.cs">
+      <DependentUpon>servicesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\statusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\statusForm.Designer.cs">
+      <DependentUpon>statusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\workersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\workersForm.Designer.cs">
+      <DependentUpon>workersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\workers_specz_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\workers_specz_Form.Designer.cs">
+      <DependentUpon>workers_specz_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="worked_forms\works_of_ordersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worked_forms\works_of_ordersForm.Designer.cs">
+      <DependentUpon>works_of_ordersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="worked_forms\clientsForm.resx">
+      <DependentUpon>clientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogForUser.resx">
+      <DependentUpon>DialogForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="also\FormBar.resx">
+      <DependentUpon>FormBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="also\FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\managersForm.resx">
+      <DependentUpon>managersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\materialForm.resx">
+      <DependentUpon>materialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\ordersForm.resx">
+      <DependentUpon>ordersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\RegistForm.resx">
+      <DependentUpon>RegistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\servicesForm.resx">
+      <DependentUpon>servicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\statusForm.resx">
+      <DependentUpon>statusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\workersForm.resx">
+      <DependentUpon>workersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\workers_specz_Form.resx">
+      <DependentUpon>workers_specz_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worked_forms\works_of_ordersForm.resx">
+      <DependentUpon>works_of_ordersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="also\packages.config" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="also\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="also\company.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VSTOEE100">
+      <Guid>{AAB9C2AA-6036-4AE1-A41C-A40AB7F39520}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>
